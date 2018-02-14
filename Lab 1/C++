@@ -1,0 +1,23 @@
+//this program will write the name, address and telephone
+//number of the programer.
+//Albert j. Lozada Negron
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "**********\n";
+	cout << "Programer: Albert Lozada"<< endl;
+	cout << "hc71 box 3045 \nNaranjito, Puerto Rico 00719 \n\n\n";
+	cout << "telephone: 7872442898\n";
+	cout << "***********";
+	
+	cout << "\n\n";
+	cout << "    ^     ^                O       O                      ^       ^                    \n";
+	cout << "       *                       o                          V       V                      \n";
+	cout << "     \\___/                  (_____)                          :                            \n";
+	cout << "                                                          \\ UUU /                      \n";
+	system("pause");
+	return 0;
+} 

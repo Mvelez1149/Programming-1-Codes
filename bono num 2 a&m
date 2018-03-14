@@ -1,0 +1,37 @@
+// thid program asks for an angle entered in radias, then displays sine, cosine, and tangent of the angle
+// albert lozada & Michael velez 
+
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+float angle;
+
+float cosRads;
+float sinRads;
+float tanRads;
+
+
+int main()
+{
+	
+cout << "Enter the angle in radians ";
+cin >> angle;
+
+cosRads = cos(angle);
+sinRads = sin(angle);
+tanRads = tan(angle);
+
+cout << setprecision(4) << fixed;
+cout << setw(2) << endl;
+cout << cosRads << endl;
+cout << sinRads << endl;
+cout << tanRads << endl;
+
+system("pause");
+
+return 0;
+
+
+}

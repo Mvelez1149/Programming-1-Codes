@@ -27,3 +27,40 @@ int main()
 	system("pause");
 	return 0;
 }
+
+S O L U T I O N
+
+// This program will read in the quantity of a particular item and its price.
+// It will then print out the total price.
+// The input will come from the keyboard and the output will go to
+// the screen. 
+
+// Michael F. Vélez & Albert Lozada
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	int quantity; // contains the amount of items purchased
+	float itemPrice; // contain the price of each item
+	float totalBill; // contains the total bill 
+	
+	cout << setprecision(2) << fixed << showpoint; // formatted output
+	cout << "please input the number of items boughts" << endl;
+	cin >> quantity;
+	cout << "please input the price " << endl;
+	cin >> itemPrice;
+	totalBill = quantity * itemPrice;
+	cout << "the total bill is $" << totalBill << endl;
+		
+	// Fill in the input statement to bring in the quantity.
+	// Fill in the prompt to ask for the price.
+	// Fill in the input statement to bring in the price of each item.
+	// Fill in the assignment statement to determine the total bill.
+	// Fill in the output statement to print total bill,
+	// with a label to the screen.
+	system("pause");
+	return 0;
+}

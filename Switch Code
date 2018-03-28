@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+// Authors : Michael Fabian Velez & Albert Lozada
+// Date : March 28 2018
+// Make a menu program with the option of running a waterbill 
+// sub-program and a T-shirt receipt sub-program
+
+// Function prototypes
+char getOption();
+void showMenu();
+
+//main function
+int main()
+{
+	char chrOption;
+	int WaterBill_1, WaterBill_2, WaterBill_3, WaterBill_4;
+	double average;
+
+	showMenu();
+	chrOption = getOption();
+	cout << "option: " << chrOption << endl;
+
+	//Insert your code here to complete the program 
+	//Acording to the selected option. Use a switch structure
+	//Remember to include cases for incorrect options
+
+	switch (chrOption)
+	{
+	case 'A':
+
+			cout << "Please input your water bill for quarter 1 : \n";
+			cin >>  
+	}
+
+}
+
+// Function implementations
+
+//This function ask the user for an option, reads a char and return it.
+char getOption()
+{
+
+	char chrOption;
+	cout << "please enter your option : ";
+	cin >> chrOption;
+		return chrOption;
+}
+
+// This Function shows a menu for the user.
+void showMenu()
+{
+	cout << "\n ********** MENU **********\n";
+	cout << "Please select the appropiate option: \n";
+	cout << "Please select the appropiate option: \n";
+	cout << "A. Run water Bill sub-program. \n";
+	cout << "B. Run T-Shirts sub-program. \n";
+	cout << "Q. Quit the main program. \n";
+	cout << "**************************\n";
+}
+ 

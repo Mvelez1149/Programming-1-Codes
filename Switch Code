@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 using namespace std;
 
 // Authors : Michael Fabian Velez & Albert Lozada
@@ -27,10 +27,21 @@ int main()
 
 	switch (chrOption)
 	{
+	
 	case 'A':
 
 			cout << "Please input your water bill for quarter 1 : \n";
-			cin >>  
+			cin >>  WaterBill_1
+			
+			cout << "Please input your water bill for quarter 2 : \n";
+			cin >> WaterBill_2
+			
+			cout << "Please input your water bill for quarter 3 : \n";
+			cin >> WaterBill_3
+			
+			cout >> "Please input your water bill for quarter 4 : \n";
+			
+			cin >> WaterBill_4
 	}
 
 }

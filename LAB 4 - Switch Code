@@ -1,0 +1,81 @@
+  #include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+//Authors:Michael Velez & Albert lozada
+//Date:28/3/18
+//Please enter the program description here:
+//Function Prototypes
+char getOption();
+void showMenu();
+
+int main()
+{
+	char chrOption;
+
+	showMenu();
+	chrOption = getOption();
+
+	switch (chrOption)
+	{
+	case 'A':
+	case 'a':
+		float quater1;
+		float quater2;
+		float quater3;
+		float quater4;
+		float ave;
+
+		cout << "Please input your water bill for quarter 1: " << endl;
+		cin >> quater1;
+		cout << "Please input your water bill for quarter 2: " << endl;
+		cin >> quater2;
+		cout << "Please input your water bill for quarter 3:" << endl;
+		cin >> quater3;
+		cout << "Please input your water bill for quarter 4:" << endl;
+		cin >> quater4;
+
+		ave = (quater1 + quater2 + quater3 + quater4) / 12.0;
+		cout << "Your averege monthly bill is " << setprecision(4) << ave << ".";
+		if (ave>75)
+			cout << " Too much water is being used" << endl;
+		else if (ave <= 75 && ave >=25)
+			cout << " That a typical amount of water is being used." << endl;
+		else if (ave < 25)
+			cout << " praising the user for conserving water" << endl;
+		break;
+
+	case 'B':
+	case 'b':
+		break;
+
+	case 'Q':
+	case'q':
+		break;
+	default:
+		break;
+	}
+
+	system("pause");
+	return 0;
+}
+//***************************************
+//function implementations
+// This function ask the user for an option, reads a char and return it.
+char getOption()
+{
+	char chrOption;
+	cout << "Please enter your option: " << endl;
+	cin >> chrOption;
+	return chrOption;
+}
+
+void showMenu()
+{
+	cout << "\n********** MENU **********\n";
+	cout << "Please select the appropriate option:\n";
+	cout << "A. Run Water Bill sub-program.\n";
+	cout << "B. Run T-Shirts sub-program.\n";
+	cout << "Q. Quit the main program.\n";
+	cout << "**************************\n";
+}

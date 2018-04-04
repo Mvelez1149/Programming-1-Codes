@@ -1,13 +1,16 @@
-  #include "stdafx.h"
-#include <iostream>
+   #include <iostream>
 #include <iomanip>
 using namespace std;
+
 //Authors:Michael Velez & Albert lozada
 //Date:28/3/18
 //Please enter the program description here:
 //Function Prototypes
+
 char getOption();
 void showMenu();
+
+const int t_shirt_price = 12;
 
 int main()
 {
@@ -39,29 +42,57 @@ int main()
 		cout << "Your averege monthly bill is " << setprecision(4) << ave << ".";
 		if (ave>75)
 			cout << " Too much water is being used" << endl;
-		else if (ave <= 75 && ave >=25)
+		else if (ave <= 75 && ave >= 25)
 			cout << " That a typical amount of water is being used." << endl;
 		else if (ave < 25)
 			cout << " praising the user for conserving water" << endl;
 		break;
 
 	case 'B':
-	case 'b':
+		int num_camisas;
+		float total_price;
+		float discount;
+
+		cout << "cuantas camisas deseas comprar? ";
+		cin >> num_camisas;
+
+		if (num_camisas >= 5 && num_camisas <= 10) {
+			discount = 0.10;
+		}
+		else if (num_camisas >= 11 && num_camisas <= 20) {
+			discount = 0.15;
+		}
+
+		else if (num_camisas >= 21 && num_camisas <= 30) {
+			discount = 0.20;
+		}
+
+		else if (num_camisas >= 31) {
+			discount = 0.25;
+		}
+
+		else discount = 0;
+
+		total_price = (num_camisas * t_shirt_price) - ((num_camisas * t_shirt_price) * discount);
+
+		cout << "El precio total con el descuento " << discount << " es: $" << setprecision(2) << fixed << total_price << "." << endl;
 		break;
 
-	case 'Q':
-	case'q':
-		break;
 	default:
+		cout << "Error." << endl;
 		break;
+
+	 
 	}
 
 	system("pause");
 	return 0;
 }
+
 //***************************************
 //function implementations
 // This function ask the user for an option, reads a char and return it.
+
 char getOption()
 {
 	char chrOption;
@@ -79,3 +110,5 @@ void showMenu()
 	cout << "Q. Quit the main program.\n";
 	cout << "**************************\n";
 }
+
+ 

@@ -1,0 +1,71 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+void intro();
+char getOption();
+void showMenu();
+void options();
+string user_choise;
+
+int Miles_Traveled = 0;
+int Thirst = 0;
+int Camel_Tiredness = 0;
+
+int Natives_Miles = -20;
+int Canteen_Drinks = 3;
+
+int main(){
+	intro();
+
+	//start loop
+ bool done = false;
+
+ while (!done){
+	 options(); 
+	 if ("Q" == user_choise || "q" == user_choise)
+	 {
+		 done = true;
+	 }
+
+	 else if (user_choise == "E" || user_choise == "e") {
+ 
+cout << " Miles traveled : " << Miles_Traveled;
+cout << " Drinks in canteen : " << Canteen_Drinks;
+cout << " The natives are " << Natives_Miles << " miles behind you.";
+	 }
+	 else if (user_choise == "D" || "d"){
+		 cout << " The camel is happy ";
+	 }
+
+	 else if (user_choise == "C" || "d") {
+
+	//end loop
+}
+}
+  
+void intro()
+{
+cout << " Welcome to Camel! ";
+cout << " You have stolen a camel to make your way across the great Mobi desert. ";
+cout << " The natives want their camel back and are chasing you down! Survive your ";
+cout << " desert trek and out run the natives. ";
+}
+
+void options()
+{
+	 
+cout << " A. Drink from your canteen. " << endl;
+cout << " B. Ahead moderate speed. " << endl;
+cout << " C. Ahead full speed. " << endl;
+cout << " D. Stop for the night. " << endl;
+cout << " E. Status check. " << endl;
+cout << " Q. Quit. " << endl;
+
+cout << " Select option : " ;
+cin >> user_choise;
+
+}
+

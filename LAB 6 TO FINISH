@@ -1,0 +1,185 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+//Authors: Michael Fabian Vélez & Albert Lozada
+//Date: April 16 2018
+//Please enter the program description here:
+//
+//
+//Function Prototypes
+char getOption();
+void showMenu();
+//Prototypes of functions to be implemented by the student
+void subMonthlyRainfall();
+void subHotBeverage();
+
+//Variables 
+
+int month;
+char beverage;
+float cost;
+float number;
+//main function
+int main()
+{
+	char chrOption;
+	do {
+		showMenu();
+		chrOption = getOption();
+		cout << "Option: " << chrOption << endl; // <- You can delet these line
+		
+		switch (chrOption)
+	case 'a': 
+	case 'A':
+		subMonthlyRainfall << endl;
+		
+		break;
+		case 'b'
+		//Insert your code here to call the right functions
+												 //According to the selected option. Use a switch structure
+												 //Remember to include cases for incorrect options
+	} while (chrOption != 'Q');
+	cout << "\n You Quit the main program! \n" << endl;
+	return 0;
+}
+//*****************************************************************
+//function implementations
+// This function ask the user for an option, reads a char and return it.
+char getOption()
+{
+	char chrOption;
+	cout << "Please enter your option: ";
+	cin >> chrOption;
+	return chrOption;
+}
+//This function shows a menu for the user.
+void showMenu()
+{
+	cout << "\n********** MENU **********\n";
+	cout << "Please select the apropriate option:\n";
+	cout << "A. Run Monthly Rainfall sub-program.\n";
+	cout << "B. Run Hot Beverage sub-program.\n";
+	cout << "Q. Quit the main program.\n";
+	cout << "**************************\n";
+}
+// This function illustrates the use of a sentinel in a while loop.
+// The user is asked for monthly rainfall totals until a sentinel
+// value of -1 is entered. Then the total rainfall is displayed.
+// ***Fill in the code to complete the implementation of
+// the Monthly Rainfall function
+void subMonthlyRainfall()
+{
+	// Fill in the code to define and initialize to 1 the variable month
+	float total = 0, rain;
+	cout << "Enter the total rainfall for month " << month << endl;
+	cout << "Enter -1 when you are finished" << endl;
+	// Fill in the code to read in the value for rain
+	// Fill in the code to start a while loop that iterates
+	// while rain does not equal -1
+	{
+		// Fill in the code to update total by adding it to rain
+		// Fill in the code to increment month by one
+		cout << "Enter the total rainfall in inches for month " << month << endl;
+		cout << "Enter -1 when you are finished: " << endl;
+		// Fill in the code to read in the value for rain
+	}
+	if (month == 1)
+		cout << "No data has been entered" << endl;
+	else
+	{
+		cout << "The total rainfall for the " << month - 1;
+		cout << " months is " << total << " inches." << endl;
+	}
+}
+// This function displays a hot beverage menu and prompts the user to
+// make a selection. A switch statement determines which item the user
+// has chosen. A do-while loop repeats until the user selects item E
+// from the menu.
+// Fill in the code to complete the implementation of
+// the subHotBeverage function
+void subHotBeverage()
+{
+	// Fill in the code to define an integer variable called number,
+	// a floating point variable called cost,
+	// and a character variable called beverage
+	bool validBeverage;
+	cout << fixed << showpoint << setprecision(2);
+	do
+	{
+		cout << endl << endl;
+		cout << "Hot Beverage Menu" << endl << endl;
+		cout << "A: Coffee $1.00" << endl;
+		cout << "B: Tea $ .75" << endl;
+		cout << "C: Hot Chocolate $1.25" << endl;
+		cout << "D: Cappuccino $2.50" << endl << endl << endl;
+		cout << "Enter the beverage A,B,C, or D you desire" << endl;
+		cout << "Enter E to exit the program" << endl << endl;
+		// Fill in the code to read in beverage
+		switch (beverage)
+		{
+		case 'a': " Coffee ";
+		case 'A': " Coffee ";
+		case 'b': " Tea ";
+		case 'B': " Tea ";
+		case 'c': " Hot Chocolate ";
+		case 'C': " Hot Chocolate ";
+		case 'd': " Cappuccino ";
+		case 'D': " Cappuccino ";
+			validBeverage = true;
+			break;
+		default: validBeverage = false;
+		}
+		if (validBeverage == true)
+		{
+			cout << "How many cups would you like?" << endl;
+			cin >> number;
+			// Fill in the code to read in number
+		}
+		// Fill in the code to begin a switch statement
+		// that is controlled by beverage
+
+		switch (beverage)
+		{
+		case 'a':  
+		case 'A':
+            cost = number * 1.0;
+			cout << "The total cost is $ " << cost << endl;
+			break;
+			// Fill in the code to give the case for hot chocolate ($1.25 a cup)
+			// Fill in the code to give the case for tea ( $0.75 a cup)
+			// Fill in the code to give the case for cappuccino ($2.50 a cup)
+		
+		case 'b' :
+		case 'B' :
+			cost = number * 1.25;
+			cout << " The total cost is $ " << cost << endl;
+			break;
+
+		case 'c' :
+		case 'C' :
+			cost = number * 0.75;
+			cout << " The total cost is $ " << cost << endl;
+
+		case 'd' :
+		case 'D' :
+			cost = number * 2.50;
+			cout << " The total cost is $ " << cost << endl;
+
+		case 'e':
+		case 'E':
+			cout << " Please come again" << endl;
+			break;
+		
+		default:
+			cout << " Thak you for coming, have a nice day! " << endl;
+			// Fill in the code to write a message
+			
+			// indicating an invalid selection.
+				cout << " Try again please" << endl;
+		}
+
+	} while (true); // Fill in the code to finish the do-while statement with the
+					// condition that beverage does not equal E or e.
+}
+
+	

@@ -1,0 +1,77 @@
+#include <iostream>
+#include <string> 
+#include <iomanip>
+using namespace std;
+
+int MY_MOVIE_APPLICAITON, Movie_Released;
+
+string Movie_Title;
+
+int Movie,
+Add_A_Movie,
+Display_A_Movie,
+Delete_A_Movie,
+Find_Movie_Actor,
+Find_Movie_Title,
+Save_Movie,
+Load_Movie;
+
+string Movie_Director;
+
+
+
+bool done = false;
+int main()
+{
+
+
+	cout << "MY MOVIE APPLICATION" << endl;
+	cout << "--------------------" << endl;
+	cout << " 1. Display movies " << endl;
+	cout << " 2. Display a movie " << endl;
+	cout << " 3. Add a movie " << endl;
+	cout << " 4. Delete a movie " << endl;
+	cout << " 5. Find movies by title " << endl;
+	cout << " 6. Find movies by actor " << endl;
+	cout << " 7. Save movies to file " << endl;
+	cout << " 8. Load movies from file " << endl;
+	cout << " 9. Exit application " << endl;
+	cout << "--------------------" << endl;
+	cout << " Enter option number " << endl;
+	cin >> MY_MOVIE_APPLICAITON;
+
+	switch (MY_MOVIE_APPLICAITON)
+	{
+		case 3:
+            cout << "Realesed:" << endl;
+			cin >> Movie_Released;
+
+			cout << "Movie Title:" << endl;
+			cin >> Movie_Title;
+			
+			
+			cout << "Director:" << endl;
+			cin >> Movie_Director;
+			
+			
+			break;
+		
+
+
+
+	case 9:
+		done = true;
+		exit(0);
+		break;
+
+	default: cout << "INVALID OPTION" << endl;
+		break;
+	}
+
+
+
+
+	system("pause");
+
+	return 0;
+}
